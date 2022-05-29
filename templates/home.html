@@ -3,8 +3,8 @@
 {% block page_title %}Home{% endblock %}
 
 {% block content %}
-
-    <h1>Amir</h1>
+    
+    <h1>Home Page</h1>
     {% if user.is_authenticated %}
         <p>Salam {{ user.username }} | <a href="{% url 'logout' %}">logout</a></p>
     {% else %}
