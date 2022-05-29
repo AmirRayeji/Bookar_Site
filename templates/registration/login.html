@@ -3,11 +3,16 @@
 {% block page_title %}Login{% endblock %}
 
 {% block content %}
-
+    <h1>Login</h1>
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
         <button type="submit">ورود</button>
     </form>
+    <p>
+        <a href="{% url 'signup' %}">signup</a>
+        |
+        <a href="{% url 'password_reset' %}">fogot password</a>
+    </p>
 
 {% endblock %}
