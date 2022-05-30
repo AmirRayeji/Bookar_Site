@@ -1,14 +1,14 @@
 {% extends '_base.html' %}
 
-{% block page_title %}signup{% endblock %}
+{% block page_title %}Sign Up{% endblock %}
 
 {% block content %}
-    <h1>signup</h1>
+    <h1>ثبت نام</h1>
     <form action="" method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">ثبت نام</button>
+        <button type="submit" class="btn btn-dark">ثبت نام</button>
     </form>
-    <a href="{% url 'login' %}">login</a>
-
+    <span>یا</span>
+    <p><a class="text-decoration-none" href="{% url 'login' %}" style="color: #000;">ورود</a></p>
 {% endblock %}
