@@ -23,9 +23,12 @@
                             <h5 class="small my-1"><span class="text-muted">گرد آورنده: </span>{{ book.user.username }}
                             </h5>
 
-                            <a class="text-decoration-none" style="color: darkgreen" href="{% url 'book_update' book.id %}">ویرایش</a>
-                            <span>|</span>
-                            <a class="text-decoration-none" style="color: darkred" href="{% url 'book_delete' book.id %}">حذف</a>
+                            {% if book.user == user %}
+                                <a class="text-decoration-none" style="color: darkgreen" href="{% url 'book_update' book.id %}">ویرایش</a>
+                                <span>|</span>
+                                <a class="text-decoration-none" style="color: darkred" href="{% url 'book_delete' book.id %}">حذف</a>
+                            {% endif %}
+
                         </div>
 
                     </div>
